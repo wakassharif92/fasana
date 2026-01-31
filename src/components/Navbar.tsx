@@ -1,14 +1,14 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useSection } from "@/context/SectionContext";
+import { useSection, Section } from "@/context/SectionContext";
 
 type NavItem = {
   label: string;
   href: string;
-  icon: JSX.Element;
+  icon: ReactNode;
 };
 
 export default function Navbar() {
@@ -155,7 +155,7 @@ export default function Navbar() {
                   return (
                     <button
                       key={item.href}
-                      onClick={() => setSection(item.href)}
+                      onClick={() => setSection(item.href as Section)}
                       className={[
                         "flex items-center gap-2",
                         "rounded-full",
