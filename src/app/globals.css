@@ -10,6 +10,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-sora: var(--font-sora);
+  --font-inria: "Inria Serif", serif;
+  --font-robysoho: "RobySoho", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +22,71 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Inria Serif";
+  src: url("/fonts/inria_serif/InriaSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inria Serif";
+  src: url("/fonts/inria_serif/InriaSerif-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inria Serif";
+  src: url("/fonts/inria_serif/InriaSerif-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inria Serif";
+  src: url("/fonts/inria_serif/InriaSerif-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobySoho";
+  src: url("/fonts/roby_soho/RobySoho-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Responsive Background Images */
+@media (max-width: 640px) {
+  .bg-mobile {
+    background-image: url("/images/fasana-mobile-1.png");
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .bg-tablet {
+    background-image: url("/images/fasana-tablet-1.png");
+  }
+}
+
+@media (min-width: 1025px) {
+  .bg-desktop {
+    background-image: url("/images/fasana-desktop-1.png");
+  }
 }
