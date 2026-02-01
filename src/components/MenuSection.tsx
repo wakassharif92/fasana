@@ -8,51 +8,186 @@ const menuData = {
     // COFFEES
     { name: "Espresso", priceR: "450", priceL: "565", category: "Coffees" },
     { name: "Café Latte", priceR: "545", priceL: "595", category: "Coffees" },
-    { name: "Flavoured Latte", priceR: "565", priceL: "615", category: "Coffees" },
-    { name: "Cappuccino (Hot/Iced)", priceR: "495", priceL: "545", category: "Coffees" },
+    {
+      name: "Flavoured Latte",
+      priceR: "565",
+      priceL: "615",
+      category: "Coffees",
+    },
+    {
+      name: "Cappuccino (Hot/Iced)",
+      priceR: "495",
+      priceL: "545",
+      category: "Coffees",
+    },
     { name: "Flat White", priceR: "545", priceL: "595", category: "Coffees" },
-    { name: "Pistachio Latte", priceR: "625", priceL: "695", category: "Coffees" },
-    { name: "Spanish Latte", priceR: "595", priceL: "735", category: "Coffees" },
-    { name: "Chai Tea Latte", priceR: "595", priceL: "645", category: "Coffees" },
+    {
+      name: "Pistachio Latte",
+      priceR: "625",
+      priceL: "695",
+      category: "Coffees",
+    },
+    {
+      name: "Spanish Latte",
+      priceR: "595",
+      priceL: "735",
+      category: "Coffees",
+    },
+    {
+      name: "Chai Tea Latte",
+      priceR: "595",
+      priceL: "645",
+      category: "Coffees",
+    },
     { name: "Lotus Latte", priceR: "595", priceL: "645", category: "Coffees" },
-    { name: "Hazelnut Macchiato", priceR: "625", priceL: "745", category: "Coffees" },
+    {
+      name: "Hazelnut Macchiato",
+      priceR: "625",
+      priceL: "745",
+      category: "Coffees",
+    },
     { name: "Americano", priceR: "425", priceL: "495", category: "Coffees" },
-    { name: "White Americano", priceR: "425", priceL: "495", category: "Coffees" },
+    {
+      name: "White Americano",
+      priceR: "425",
+      priceL: "495",
+      category: "Coffees",
+    },
     { name: "Cortado", priceR: "425", priceL: "495", category: "Coffees" },
     { name: "White Mocha", priceR: "625", priceL: "695", category: "Coffees" },
     { name: "Iced Coffee", priceR: "625", priceL: "695", category: "Coffees" },
     // ICED COFFEES
-    { name: "Iced Espresso", priceR: "525", priceL: "565", category: "Iced Coffees" },
-    { name: "Iced Latte", priceR: "525", priceL: "665", category: "Iced Coffees" },
-    { name: "Flavoured Latte", priceR: "625", priceL: "735", category: "Iced Coffees" },
-    { name: "Iced Cappuccino", priceR: "525", priceL: "595", category: "Iced Coffees" },
-    { name: "Iced White Mocha", priceR: "695", priceL: "795", category: "Iced Coffees" },
-    { name: "Iced Spanish Latte", priceR: "725", priceL: "845", category: "Iced Coffees" },
-    { name: "Iced Caramel Macchiato", priceR: "695", priceL: "775", category: "Iced Coffees" },
-    { name: "Iced Hazelnut Macchiato", priceR: "695", priceL: "775", category: "Iced Coffees" },
-    { name: "Iced Flat White", priceR: "595", priceL: "695", category: "Iced Coffees" },
-    { name: "Iced Pistachio Latte", priceR: "895", priceL: "995", category: "Iced Coffees" },
-    { name: "Hot So Hot Chocolate", priceR: "695", priceL: "795", category: "Iced Coffees" },
+    {
+      name: "Iced Espresso",
+      priceR: "525",
+      priceL: "565",
+      category: "Iced Coffees",
+    },
+    {
+      name: "Iced Latte",
+      priceR: "525",
+      priceL: "665",
+      category: "Iced Coffees",
+    },
+    {
+      name: "Flavoured Latte",
+      priceR: "625",
+      priceL: "735",
+      category: "Iced Coffees",
+    },
+    {
+      name: "Iced Cappuccino",
+      priceR: "525",
+      priceL: "595",
+      category: "Iced Coffees",
+    },
+    {
+      name: "Iced White Mocha",
+      priceR: "695",
+      priceL: "795",
+      category: "Iced Coffees",
+    },
+    {
+      name: "Iced Spanish Latte",
+      priceR: "725",
+      priceL: "845",
+      category: "Iced Coffees",
+    },
+    {
+      name: "Iced Caramel Macchiato",
+      priceR: "695",
+      priceL: "775",
+      category: "Iced Coffees",
+    },
+    {
+      name: "Iced Hazelnut Macchiato",
+      priceR: "695",
+      priceL: "775",
+      category: "Iced Coffees",
+    },
+    {
+      name: "Iced Flat White",
+      priceR: "595",
+      priceL: "695",
+      category: "Iced Coffees",
+    },
+    {
+      name: "Iced Pistachio Latte",
+      priceR: "895",
+      priceL: "995",
+      category: "Iced Coffees",
+    },
+    {
+      name: "Hot So Hot Chocolate",
+      priceR: "695",
+      priceL: "795",
+      category: "Iced Coffees",
+    },
     // TEAS
     { name: "Peach Iced Tea", priceR: "495", priceL: "575", category: "Teas" },
     { name: "Lemon Iced Tea", priceR: "495", priceL: "525", category: "Teas" },
-    { name: "English Breakfast Tea", priceR: "", priceL: "95", category: "Teas" },
+    {
+      name: "English Breakfast Tea",
+      priceR: "",
+      priceL: "95",
+      category: "Teas",
+    },
     { name: "Green Tea", priceR: "", priceL: "95", category: "Teas" },
     { name: "Lipton Tea", priceR: "", priceL: "295", category: "Teas" },
     { name: "Green Tea", priceR: "", priceL: "295", category: "Teas" },
     { name: "Karak Chai (Sweet)", priceR: "", priceL: "95", category: "Teas" },
     // HOT CHOCOLATES
-    { name: "Signature Hot Chocolate", priceR: "595", priceL: "625", category: "Hot Chocolates" },
-    { name: "Dark Hot Chocolate", priceR: "595", priceL: "625", category: "Hot Chocolates" },
-    { name: "Salted Caramel Hot Chocolate", priceR: "595", priceL: "665", category: "Hot Chocolates" },
-    { name: "Marshmallow Hot Chocolate", priceR: "595", priceL: "665", category: "Hot Chocolates" },
+    {
+      name: "Signature Hot Chocolate",
+      priceR: "595",
+      priceL: "625",
+      category: "Hot Chocolates",
+    },
+    {
+      name: "Dark Hot Chocolate",
+      priceR: "595",
+      priceL: "625",
+      category: "Hot Chocolates",
+    },
+    {
+      name: "Salted Caramel Hot Chocolate",
+      priceR: "595",
+      priceL: "665",
+      category: "Hot Chocolates",
+    },
+    {
+      name: "Marshmallow Hot Chocolate",
+      priceR: "595",
+      priceL: "665",
+      category: "Hot Chocolates",
+    },
     // SMOOTHIES
     { name: "Blueberry", priceR: "765", priceL: "885", category: "Smoothies" },
     { name: "Guava", priceR: "795", priceL: "895", category: "Smoothies" },
-    { name: "Strawberry Banana", priceR: "795", priceL: "895", category: "Smoothies" },
-    { name: "Peachy Pineapple", priceR: "795", priceL: "895", category: "Smoothies" },
-    { name: "Mango Pineapple", priceR: "795", priceL: "895", category: "Smoothies" },
-    { name: "Fresh Orange & Coconut", priceR: "895", priceL: "995", category: "Smoothies" },
+    {
+      name: "Strawberry Banana",
+      priceR: "795",
+      priceL: "895",
+      category: "Smoothies",
+    },
+    {
+      name: "Peachy Pineapple",
+      priceR: "795",
+      priceL: "895",
+      category: "Smoothies",
+    },
+    {
+      name: "Mango Pineapple",
+      priceR: "795",
+      priceL: "895",
+      category: "Smoothies",
+    },
+    {
+      name: "Fresh Orange & Coconut",
+      priceR: "895",
+      priceL: "995",
+      category: "Smoothies",
+    },
     // SHAKES
     { name: "Classic Shake", price: "645", category: "Shakes" },
     { name: "Strawberry Vanilla Strawberry", price: "", category: "Shakes" },
@@ -80,10 +215,30 @@ const menuData = {
     { name: "Manhattan", price: "440", category: "Mocktails" },
     { name: "Blue Breeze", price: "", category: "Mocktails" },
     // CHILLERS
-    { name: "Paradise Chiller", priceR: "545", priceL: "595", category: "Chillers" },
-    { name: "Black Pearl Chiller", priceR: "665", priceL: "125", category: "Chillers" },
-    { name: "Iced Lemon Chiller", priceR: "545", priceL: "625", category: "Chillers" },
-    { name: "Wild Tropical Chiller", priceR: "645", priceL: "525", category: "Chillers" },
+    {
+      name: "Paradise Chiller",
+      priceR: "545",
+      priceL: "595",
+      category: "Chillers",
+    },
+    {
+      name: "Black Pearl Chiller",
+      priceR: "665",
+      priceL: "125",
+      category: "Chillers",
+    },
+    {
+      name: "Iced Lemon Chiller",
+      priceR: "545",
+      priceL: "625",
+      category: "Chillers",
+    },
+    {
+      name: "Wild Tropical Chiller",
+      priceR: "645",
+      priceL: "525",
+      category: "Chillers",
+    },
     // DRINKS
     { name: "Soft Drinks", price: "140", category: "Drinks" },
     { name: "Mineral Water", price: "90", category: "Drinks" },
@@ -216,7 +371,9 @@ export default function MenuSection() {
                     <div className="flex gap-3 items-center">
                       {item.priceR && (
                         <div className="text-center">
-                          <p className="text-[9px] text-white/50 uppercase mb-1">R</p>
+                          <p className="text-[9px] text-white/50 uppercase mb-1">
+                            R
+                          </p>
                           <p className="text-sm md:text-base font-semibold text-white whitespace-nowrap">
                             {item.priceR}
                           </p>
@@ -224,7 +381,9 @@ export default function MenuSection() {
                       )}
                       {item.priceL && (
                         <div className="text-center">
-                          <p className="text-[9px] text-white/50 uppercase mb-1">L</p>
+                          <p className="text-[9px] text-white/50 uppercase mb-1">
+                            L
+                          </p>
                           <p className="text-sm md:text-base font-semibold text-white whitespace-nowrap">
                             {item.priceL}
                           </p>
