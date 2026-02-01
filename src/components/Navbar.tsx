@@ -1,9 +1,15 @@
 "use client";
 
 import { useMemo, ReactNode, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { useSection, Section } from "@/context/SectionContext";
+import {
+  HiHome,
+  HiInformationCircle,
+  HiSquares2X2,
+  HiPhoto,
+  HiMapPin,
+} from "react-icons/hi2";
 
 type NavItem = {
   label: string;
@@ -20,91 +26,27 @@ export default function Navbar() {
       {
         label: "Home",
         href: "Home",
-        icon: (
-          <svg
-            viewBox="0 0 24 24"
-            className="h-4 w-4"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M3 12l9-9 9 9v-2h-2v7h-4v-4h-4v4H5v-7H3v2Z"
-              fill="currentColor"
-              opacity="0.9"
-            />
-          </svg>
-        ),
+        icon: <HiHome className="h-4 w-4" />,
       },
       {
         label: "About",
         href: "About",
-        icon: (
-          <svg
-            viewBox="0 0 24 24"
-            className="h-4 w-4"
-            fill="none"
-            aria-hidden="true"
-          >
-            <circle cx="12" cy="8" r="2" fill="currentColor" opacity="0.9" />
-            <path
-              d="M12 11a5 5 0 0 0-5 5v5h10v-5a5 5 0 0 0-5-5Z"
-              fill="currentColor"
-              opacity="0.9"
-            />
-          </svg>
-        ),
+        icon: <HiInformationCircle className="h-4 w-4" />,
+      },
+      {
+        label: "Menu",
+        href: "Menu",
+        icon: <HiSquares2X2 className="h-4 w-4" />,
       },
       {
         label: "Ambience",
         href: "Ambience",
-        icon: (
-          <svg
-            viewBox="0 0 24 24"
-            className="h-4 w-4"
-            fill="none"
-            aria-hidden="true"
-          >
-            <circle
-              cx="12"
-              cy="12"
-              r="9"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              opacity="0.6"
-            />
-            <path
-              d="M12 4v16M4 12h16"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              opacity="0.4"
-            />
-          </svg>
-        ),
+        icon: <HiPhoto className="h-4 w-4" />,
       },
       {
         label: "Visit Us",
         href: "Visit Us",
-        icon: (
-          <svg
-            viewBox="0 0 24 24"
-            className="h-4 w-4"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              opacity="0.6"
-            />
-            <path
-              d="M12 6v6l4 2.5"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              opacity="0.85"
-            />
-          </svg>
-        ),
+        icon: <HiMapPin className="h-4 w-4" />,
       },
     ],
     [],
@@ -115,9 +57,9 @@ export default function Navbar() {
       {/* Desktop: Center stack with Logo and navbar pill */}
       <div className="hidden md:flex items-center justify-center">
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center justify-center"
+        <button
+          onClick={() => setSection("Home")}
+          className="flex items-center justify-center cursor-pointer"
           style={{ WebkitTapHighlightColor: "transparent" }}
         >
           <Image
@@ -128,7 +70,7 @@ export default function Navbar() {
             priority
             className="object-contain"
           />
-        </Link>
+        </button>
 
         {/* Navbar pill */}
         <div className="w-full px-[10px]">
@@ -136,13 +78,13 @@ export default function Navbar() {
             className="
               mx-auto
               w-full
-              max-w-[560px]
+              max-w-[630px]
               rounded-full
               bg-white/20
               backdrop-blur-2xl
-              border-3 border-black/50
+              
               shadow-[0_10px_30px_rgba(0,0,0,0.35)]
-              px-2 py-2
+              px-3 py-3
             "
           >
             <div className="flex items-center justify-between gap-2">
@@ -196,26 +138,27 @@ export default function Navbar() {
       </div>
 
       {/* Mobile: Horizontal navbar with logo and hamburger */}
-      <div className="md:hidden flex items-center justify-between px-4 py-3 bg-black/40 backdrop-blur-md">
-        <Link
-          href="/"
-          className="flex items-center"
+      <div className="md:hidden flex items-center justify-center px-4 py-3 bg-black/40 backdrop-blur-md relative">
+        {/* Centered Logo */}
+        <button
+          onClick={() => setSection("Home")}
+          className="flex items-center cursor-pointer"
           style={{ WebkitTapHighlightColor: "transparent" }}
         >
           <Image
             src="/logo-white.png"
             alt="Fasana"
-            width={60}
-            height={60}
+            width={140}
+            height={140}
             priority
             className="object-contain"
           />
-        </Link>
+        </button>
 
-        {/* Hamburger Menu Button */}
+        {/* Hamburger Menu Button - Positioned absolute right */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex flex-col gap-1.5 p-2 rounded-lg hover:bg-white/10 transition-colors"
+          className="absolute right-4 flex flex-col gap-1.5 p-2 rounded-lg hover:bg-white/10 transition-colors"
           style={{ WebkitTapHighlightColor: "transparent" }}
         >
           <div

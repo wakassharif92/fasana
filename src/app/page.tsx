@@ -494,7 +494,7 @@ export default function Home() {
 
   // Get video source based on device type
   const getVideoSrc = () => {
-    if (isMobileOrTablet) {
+    if (isMobileOrTablet && section === "Home") {
       return "/images/fasana-mobile-video.mp4";
     }
     return current.type === "video" ? current.videoSrc : undefined;

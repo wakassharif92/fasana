@@ -255,10 +255,9 @@ export default function MenuSection() {
   const currentItems = menuData[selectedFilter as keyof typeof menuData] || [];
 
   return (
-    <div className="w-full h-screen flex relative bg-black/40">
-      {/* Fixed left side - Image with overlay and title */}
-      {/* Left side image - Hidden on mobile, visible on medium+ screens */}
-      <div className="hidden md:block fixed left-0 top-0 w-1/2 h-screen bg-cover bg-center bg-gray-900 overflow-hidden">
+    <div className="w-full min-h-screen flex relative bg-black">
+      {/* Left side image - Hidden on mobile and tablet, visible on large screens only */}
+      <div className="hidden lg:block fixed left-0 top-0 w-1/2 h-screen bg-cover bg-center bg-gray-900 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=1200&fit=crop"
           alt="Menu Background"
@@ -273,7 +272,7 @@ export default function MenuSection() {
             EXPERIENCE
           </p>
           <h2
-            className="text-4xl md:text-5xl lg:text-7xl font-semibold text-white"
+            className="text-5xl lg:text-7xl font-semibold text-white"
             style={{
               letterSpacing: "0.02em",
               fontFamily: "'Great Vibes', cursive",
@@ -284,46 +283,17 @@ export default function MenuSection() {
         </div>
       </div>
 
-      {/* Mobile Menu Header */}
-      <div className="md:hidden bg-black/90 px-4 pt-4 pb-6">
-        <h2
-          className="text-3xl md:text-4xl font-semibold text-white mb-4"
-          style={{
-            letterSpacing: "0.02em",
-            fontFamily: "'Great Vibes', cursive",
-          }}
-        >
-          Menu
-        </h2>
-        {/* Filter buttons - Desktop only */}
-        <div className="hidden md:flex flex-wrap gap-2 px-8 py-6">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setSelectedFilter(filter)}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
-                selectedFilter === filter
-                  ? "bg-[#00bfa5] text-black"
-                  : "bg-white/10 text-white hover:bg-white/20"
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Right side - Scrollable menu list */}
-      <div className="w-full md:w-1/2 md:ml-auto flex flex-col bg-black/90 md:bg-black">
-        {/* Header with filters */}
-        <div className="sticky top-0 z-20 bg-black/95 backdrop-blur-sm px-6 md:px-8 pt-8 pb-4">
-          {/* Mobile only title */}
-          <div className="md:hidden mb-6">
+      {/* Right side - Menu list (Full width on mobile/tablet, half width on desktop) */}
+      <div className="w-full lg:w-1/2 lg:ml-auto flex flex-col bg-black min-h-screen">
+        {/* Header with title and filters */}
+        <div className="sticky top-0 z-20 bg-black/95 backdrop-blur-sm px-4 md:px-6 lg:px-8 pt-6 md:pt-8 pb-4">
+          {/* Title - Visible on mobile/tablet, hidden on large screens */}
+          <div className="lg:hidden mb-4 md:mb-6">
             <p className="text-xs tracking-[0.3em] uppercase text-white/60 mb-2 font-inria">
               EXPERIENCE
             </p>
             <h2
-              className="text-4xl md:text-5xl font-semibold text-white mb-6"
+              className="text-3xl md:text-4xl font-semibold text-white"
               style={{
                 letterSpacing: "0.02em",
                 fontFamily: "'Great Vibes', cursive",
