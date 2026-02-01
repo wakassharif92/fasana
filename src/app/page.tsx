@@ -250,7 +250,7 @@ const sectionContent = {
     content: (
       <div className="text-center max-w-2xl">
         <h1
-          className="text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 font-inria"
+          className="text-3xl md:text-5xl lg:text-7xl font-semibold mb-4 md:mb-6 font-inria"
           style={{
             WebkitTextStroke: "1.5px rgba(226, 232, 240, 0.9)",
             color: "transparent",
@@ -264,21 +264,14 @@ const sectionContent = {
         >
           Where Stories Brew
         </h1>
-        <p
-          className="text-lg md:text-md text-gray-100 mb-8"
-          style={{ fontFamily: "'Great Vibes', cursive" }}
-        >
+        <p className="text-sm md:text-lg text-gray-100 mb-6 md:mb-8 font-inria px-2">
           Fasana Café is more than a coffee shop, it's a sanctuary for readers,
           thinkers, and dreamers. Born from Pakistan's beloved Readings
           bookstore, we blend the aroma of freshly brewed coffee with the
           timeless charm of literature.
         </p>
         <button
-          style={{
-            letterSpacing: "0.04em",
-            fontFamily: "'Great Vibes', cursive",
-          }}
-          className="px-8 py-2.5 rounded-full text-[15px] font-semibold text-black 
+          className="px-6 md:px-8 py-2 md:py-2.5 rounded-full text-sm md:text-[15px] font-semibold text-black 
               bg-gradient-to-b from-[#ffffff] to-[#d9d9d9]
               shadow-[inset_0_1px_0_rgba(255,255,255,0.8),_0_2px_4px_rgba(0,0,0,0.15)]
               hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.8),_0_3px_6px_rgba(0,0,0,0.25)]
@@ -294,29 +287,24 @@ const sectionContent = {
     imageSrc: "/about-desktop-1.png",
     content: (
       <div className="w-full max-w-5xl px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          {/* <div className="rounded-3xl bg-white/90 shadow-[0_12px_30px_rgba(0,0,0,0.25)] overflow-hidden">
-            <div className="aspect-[4/3] w-full flex items-center justify-center bg-[#f2f2f2]">
-              <div className="text-gray-400 text-sm">Image</div>
-            </div>
-          </div> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
           <div className="text-left text-[#f6eadc]">
             <h2
               style={{
                 letterSpacing: "0.04em",
                 fontFamily: "'Great Vibes', cursive",
               }}
-              className="text-3xl md:text-4xl font-semibold mb-4 "
+              className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4"
             >
               A Story Worth Telling
             </h2>
-            <p className="text-base md:text-lg leading-relaxed mb-6 text-[#f0e0cf] font-inria">
+            <p className="text-sm md:text-base lg:text-lg leading-relaxed mb-4 md:mb-6 text-[#f0e0cf] font-inria">
               Fasana—meaning "story" in Urdu—is an extension of Readings, the
               beloved bookstore that has nurtured Pakistan's reading culture for
               years. We believe that the best conversations happen over a good
               book and a great cup of coffee.
             </p>
-            <p className="text-base md:text-lg leading-relaxed text-[#f0e0cf]">
+            <p className="text-sm md:text-base lg:text-lg leading-relaxed text-[#f0e0cf]">
               Our café is designed as a cultural gathering space where
               literature meets life, where strangers become friends over shared
               stories, and where every visit writes a new chapter.
@@ -324,8 +312,8 @@ const sectionContent = {
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-2xl bg-transparent border border-white/20 p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
+        <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="rounded-2xl bg-transparent border border-white/20 p-4 md:p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
             <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center text-white mb-4">
               <svg
                 viewBox="0 0 24 24"
@@ -342,7 +330,7 @@ const sectionContent = {
               </svg>
             </div>
             <h3
-              className="text-lg font-semibold text-white mb-2 font-inria"
+              className="text-base md:text-lg font-semibold text-white mb-2 font-inria"
               style={{
                 letterSpacing: "0.04em",
                 fontFamily: "'Great Vibes', cursive",
@@ -350,13 +338,13 @@ const sectionContent = {
             >
               Literary Heritage
             </h3>
-            <p className="text-sm text-white/90">
+            <p className="text-xs md:text-sm text-white/90">
               Curated book collections from Readings, available to browse while
               you sip.
             </p>
           </div>
 
-          <div className="rounded-2xl bg-transparent border border-white/20 p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
+          <div className="rounded-2xl bg-transparent border border-white/20 p-4 md:p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
             <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center text-white mb-4">
               <svg
                 viewBox="0 0 24 24"
@@ -377,7 +365,7 @@ const sectionContent = {
               </svg>
             </div>
             <h3
-              className="text-lg font-semibold text-white mb-2 "
+              className="text-base md:text-lg font-semibold text-white mb-2"
               style={{
                 letterSpacing: "0.04em",
                 fontFamily: "'Great Vibes', cursive",
@@ -385,12 +373,12 @@ const sectionContent = {
             >
               Community Space
             </h3>
-            <p className="text-sm text-white/90">
+            <p className="text-xs md:text-sm text-white/90">
               Regular book clubs, author meetups, and creative writing sessions.
             </p>
           </div>
 
-          <div className="rounded-2xl bg-transparent border border-white/20 p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
+          <div className="rounded-2xl bg-transparent border border-white/20 p-4 md:p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
             <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center text-white mb-4">
               <svg
                 viewBox="0 0 24 24"
@@ -406,7 +394,7 @@ const sectionContent = {
               </svg>
             </div>
             <h3
-              className="text-lg font-semibold text-white mb-2"
+              className="text-base md:text-lg font-semibold text-white mb-2"
               style={{
                 letterSpacing: "0.04em",
                 fontFamily: "'Great Vibes', cursive",
@@ -414,7 +402,7 @@ const sectionContent = {
             >
               Thoughtful Ambience
             </h3>
-            <p className="text-sm text-white/90">
+            <p className="text-xs md:text-sm text-white/90">
               Quiet corners for reading, spacious tables for conversations, and
               warm lighting throughout.
             </p>
@@ -450,6 +438,20 @@ export default function Home() {
 
   // soft flash when image appears
   const [flash, setFlash] = useState(false);
+
+  // Detect mobile/tablet
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
+
+  useEffect(() => {
+    // Detect screen size
+    const checkSize = () => {
+      setIsMobileOrTablet(window.innerWidth < 1024);
+    };
+
+    checkSize();
+    window.addEventListener("resize", checkSize);
+    return () => window.removeEventListener("resize", checkSize);
+  }, []);
 
   useEffect(() => {
     if (!splashDone || section !== "Home") return;
@@ -490,6 +492,24 @@ export default function Home() {
 
   const current = sectionContent[section];
 
+  // Get video source based on device type
+  const getVideoSrc = () => {
+    if (isMobileOrTablet) {
+      return "/images/fasana-mobile-video.mp4";
+    }
+    return current.type === "video" ? current.videoSrc : undefined;
+  };
+
+  // Get image source based on device type
+  const getImageSrc = () => {
+    if (isMobileOrTablet && section === "Home") {
+      return "/fasana-mobile.png";
+    }
+    return current.type === "video" || current.type === "image"
+      ? current.imageSrc
+      : undefined;
+  };
+
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
       {/* Splash */}
@@ -515,7 +535,7 @@ export default function Home() {
                   showFallback ? "opacity-0" : "opacity-100",
                   splashDone ? "opacity-100" : "opacity-0",
                 ].join(" ")}
-                src={splashDone ? current.videoSrc : undefined}
+                src={splashDone ? getVideoSrc() : undefined}
                 autoPlay={splashDone}
                 muted
                 playsInline
@@ -529,7 +549,7 @@ export default function Home() {
                   "transition-opacity duration-[1400ms] ease-in-out",
                   showFallback ? "opacity-100" : "opacity-0",
                 ].join(" ")}
-                style={{ backgroundImage: `url('${current.imageSrc}')` }}
+                style={{ backgroundImage: `url('${getImageSrc()}')` }}
               >
                 <div
                   className={[
@@ -548,7 +568,7 @@ export default function Home() {
                       : "scale-[1.06] translate-y-[14px]",
                   ].join(" ")}
                   style={{
-                    backgroundImage: `url('${current.imageSrc}')`,
+                    backgroundImage: `url('${getImageSrc()}')`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
@@ -570,7 +590,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-black/55" />
 
       {/* Content Overlay with horizontal slider */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center pt-20 px-4">
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center pt-20 md:pt-20 px-4 md:px-6">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={section}

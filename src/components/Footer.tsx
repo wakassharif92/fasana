@@ -6,23 +6,25 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white">
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Left Section - About */}
           <div>
-            <h2 className="text-2xl font-serif font-bold mb-2">Fasana Cafe</h2>
-            <p className="text-sm text-gray-400 mb-6">
+            <h2 className="text-xl md:text-2xl font-serif font-bold mb-2">
+              Fasana Cafe
+            </h2>
+            <p className="text-xs md:text-sm text-gray-400 mb-4 md:mb-6">
               Authentic Turkish & Middle Eastern flavors
             </p>
-            <p className="text-sm text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xs md:text-sm text-gray-300 mb-6 md:mb-8 leading-relaxed">
               Authentic Turkish & Middle Eastern flavors: Shawarma, Falafel,
               Mandi, Mutabbaq, Turkish Pizza and more.
             </p>
-            <div className="flex gap-3">
-              <button className="bg-white text-black px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors">
-                Order Now
+            <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
+              <button className="bg-white text-black px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold hover:bg-gray-200 transition-colors">
+                Order on WhatsApp
               </button>
-              <button className="border border-white text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-white/10 transition-colors">
+              <button className="border border-white text-white px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold hover:bg-white/10 transition-colors">
                 View Menu
               </button>
             </div>
@@ -30,28 +32,35 @@ export default function Footer() {
 
           {/* Middle Section - Visit */}
           <div>
-            <h3 className="text-sm font-semibold tracking-widest mb-6 text-gray-200">
+            <h3 className="text-xs md:text-sm font-semibold tracking-widest mb-4 md:mb-6 text-gray-200">
               VISIT
             </h3>
-            <div className="space-y-4 text-sm text-gray-300">
-              <Link href="#" className="hover:text-white transition-colors">
-                Visit Us
+            <div className="space-y-3 md:space-y-4 text-xs md:text-sm text-gray-300">
+              <p>Istanbul-style Turkish & Middle Eastern Restaurant</p>
+              <p>Pakistan</p>
+              <Link
+                href="#"
+                className="text-white hover:text-gray-300 transition-colors block"
+              >
+                Open in Maps
               </Link>
 
               <div className="pt-2">
-                <p className="text-gray-400 text-xs mb-1">WhatsApp:</p>
-                <p className="font-semibold">923001234567</p>
+                <p className="text-gray-400 text-[11px] md:text-xs mb-1">
+                  WhatsApp:
+                </p>
+                <p className="font-semibold text-sm">923001234567</p>
               </div>
             </div>
           </div>
 
           {/* Right Section - Explore & Social */}
           <div>
-            <div className="mb-8">
-              <h3 className="text-sm font-semibold tracking-widest mb-6 text-gray-200">
+            <div className="mb-6 md:mb-8">
+              <h3 className="text-xs md:text-sm font-semibold tracking-widest mb-4 md:mb-6 text-gray-200">
                 EXPLORE
               </h3>
-              <ul className="space-y-3 text-sm text-gray-300">
+              <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-300">
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     Menu
@@ -70,10 +79,10 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold tracking-widest mb-6 text-gray-200">
+              <h3 className="text-xs md:text-sm font-semibold tracking-widest mb-4 md:mb-6 text-gray-200">
                 SOCIAL
               </h3>
-              <ul className="space-y-3 text-sm text-gray-300">
+              <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-300">
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     Instagram
@@ -90,9 +99,11 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+        <div className="border-t border-gray-800 py-4 md:py-6 flex flex-col md:flex-row justify-between items-center text-xs md:text-sm text-gray-400 gap-4">
           <p>© 2026 Fasana Cafe. All rights reserved.</p>
-          <p>Crafted by Bits O'Clock</p>
+          <p className="text-center md:text-right">
+            Midnight dining • Crafted with care
+          </p>
         </div>
       </div>
     </footer>
