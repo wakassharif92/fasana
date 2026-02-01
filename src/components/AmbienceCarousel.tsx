@@ -35,7 +35,7 @@ export default function AmbienceCarousel() {
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > 50;
     const isRightSwipe = distance < -50;
@@ -67,7 +67,10 @@ export default function AmbienceCarousel() {
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {ambienceImages.map((image, index) => (
-              <div key={index} className="min-w-full h-full relative flex-shrink-0">
+              <div
+                key={index}
+                className="min-w-full h-full relative flex-shrink-0"
+              >
                 <img
                   src={image}
                   alt={`Ambience ${index + 1}`}
@@ -126,9 +129,7 @@ export default function AmbienceCarousel() {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`h-2.5 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? "bg-white w-8"
-                  : "bg-white/50 w-2.5"
+                index === currentIndex ? "bg-white w-8" : "bg-white/50 w-2.5"
               }`}
               aria-label={`Go to image ${index + 1}`}
             />
@@ -151,105 +152,105 @@ export default function AmbienceCarousel() {
               </p>
             </div>
 
-          <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 pointer-events-auto">
-            <div className="rounded-xl md:rounded-2xl bg-transparent border border-white/20 p-4 md:p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
-              <div className="h-8 md:h-10 w-8 md:w-10 rounded-full bg-white/20 flex items-center justify-center text-white mb-3 md:mb-4">
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-4 md:h-5 w-4 md:w-5"
-                  fill="none"
-                  aria-hidden="true"
+            <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 pointer-events-auto">
+              <div className="rounded-xl md:rounded-2xl bg-transparent border border-white/20 p-4 md:p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
+                <div className="h-8 md:h-10 w-8 md:w-10 rounded-full bg-white/20 flex items-center justify-center text-white mb-3 md:mb-4">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 md:h-5 w-4 md:w-5"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 6h14v12H5z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    />
+                    <path d="M9 6v12" stroke="currentColor" strokeWidth="1.5" />
+                  </svg>
+                </div>
+                <h3
+                  className="text-base md:text-lg font-semibold text-white mb-2 font-inria"
+                  style={{
+                    letterSpacing: "0.04em",
+                    fontFamily: "'Great Vibes', cursive",
+                  }}
                 >
-                  <path
-                    d="M5 6h14v12H5z"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                  <path d="M9 6v12" stroke="currentColor" strokeWidth="1.5" />
-                </svg>
+                  Reading Corners
+                </h3>
+                <p className="text-xs md:text-sm text-white/90">
+                  Cozy nooks with comfortable seating, perfect for losing
+                  yourself in a good book
+                </p>
               </div>
-              <h3
-                className="text-base md:text-lg font-semibold text-white mb-2 font-inria"
-                style={{
-                  letterSpacing: "0.04em",
-                  fontFamily: "'Great Vibes', cursive",
-                }}
-              >
-                Reading Corners
-              </h3>
-              <p className="text-xs md:text-sm text-white/90">
-                Cozy nooks with comfortable seating, perfect for losing yourself
-                in a good book
-              </p>
-            </div>
 
-            <div className="rounded-xl md:rounded-2xl bg-transparent border border-white/20 p-4 md:p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
-              <div className="h-8 md:h-10 w-8 md:w-10 rounded-full bg-white/20 flex items-center justify-center text-white mb-3 md:mb-4">
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-4 md:h-5 w-4 md:w-5"
-                  fill="none"
-                  aria-hidden="true"
+              <div className="rounded-xl md:rounded-2xl bg-transparent border border-white/20 p-4 md:p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
+                <div className="h-8 md:h-10 w-8 md:w-10 rounded-full bg-white/20 flex items-center justify-center text-white mb-3 md:mb-4">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 md:h-5 w-4 md:w-5"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M7 9a4 4 0 1 1 8 0"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    />
+                    <path
+                      d="M5 19a7 7 0 0 1 14 0"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  className="text-base md:text-lg font-semibold text-white mb-2"
+                  style={{
+                    letterSpacing: "0.04em",
+                    fontFamily: "'Great Vibes', cursive",
+                  }}
                 >
-                  <path
-                    d="M7 9a4 4 0 1 1 8 0"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                  <path
-                    d="M5 19a7 7 0 0 1 14 0"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                </svg>
+                  Open Tables
+                </h3>
+                <p className="text-xs md:text-sm text-white/90">
+                  Spacious communal areas ideal for group discussions and
+                  collaborative work.
+                </p>
               </div>
-              <h3
-                className="text-base md:text-lg font-semibold text-white mb-2"
-                style={{
-                  letterSpacing: "0.04em",
-                  fontFamily: "'Great Vibes', cursive",
-                }}
-              >
-                Open Tables
-              </h3>
-              <p className="text-xs md:text-sm text-white/90">
-                Spacious communal areas ideal for group discussions and
-                collaborative work.
-              </p>
-            </div>
 
-            <div className="rounded-xl md:rounded-2xl bg-transparent border border-white/20 p-4 md:p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
-              <div className="h-8 md:h-10 w-8 md:w-10 rounded-full bg-white/20 flex items-center justify-center text-white mb-3 md:mb-4">
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-4 md:h-5 w-4 md:w-5"
-                  fill="none"
-                  aria-hidden="true"
+              <div className="rounded-xl md:rounded-2xl bg-transparent border border-white/20 p-4 md:p-6 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
+                <div className="h-8 md:h-10 w-8 md:w-10 rounded-full bg-white/20 flex items-center justify-center text-white mb-3 md:mb-4">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 md:h-5 w-4 md:w-5"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 3l2 4 4 .5-3 3 1 4.5-4-2.5-4 2.5 1-4.5-3-3 4-.5z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  className="text-base md:text-lg font-semibold text-white mb-2"
+                  style={{
+                    letterSpacing: "0.04em",
+                    fontFamily: "'Great Vibes', cursive",
+                  }}
                 >
-                  <path
-                    d="M12 3l2 4 4 .5-3 3 1 4.5-4-2.5-4 2.5 1-4.5-3-3 4-.5z"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                </svg>
+                  Natural Light
+                </h3>
+                <p className="text-xs md:text-sm text-white/90">
+                  Large windows and warm lighting create an inviting atmosphere
+                  throughout the day
+                </p>
               </div>
-              <h3
-                className="text-base md:text-lg font-semibold text-white mb-2"
-                style={{
-                  letterSpacing: "0.04em",
-                  fontFamily: "'Great Vibes', cursive",
-                }}
-              >
-                Natural Light
-              </h3>
-              <p className="text-xs md:text-sm text-white/90">
-                Large windows and warm lighting create an inviting atmosphere
-                throughout the day
-              </p>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );

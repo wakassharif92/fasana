@@ -73,7 +73,9 @@ export default function VisitUsSection() {
             <div className="flex flex-col h-full justify-between">
               {/* Top - Title */}
               <div className="text-center mb-4 md:mb-6">
-                <p className="text-white/50 text-xs md:text-sm tracking-widest">BRANCH</p>
+                <p className="text-white/50 text-xs md:text-sm tracking-widest">
+                  BRANCH
+                </p>
                 <h2
                   className="text-3xl md:text-4xl text-white mt-3 md:mt-4 mb-4 md:mb-6"
                   style={{
