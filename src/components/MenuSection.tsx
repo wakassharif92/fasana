@@ -5,251 +5,122 @@ import { useState } from "react";
 // Menu data by category
 const menuData = {
   All: [
-    {
-      name: "Shawarma Platter",
-      description: "Hearty platter for shawarma lovers.",
-      price: "from 1,450",
-      tags: ["Most Ordered", "Single Serving"],
-      category: "Shawarma",
-    },
-    {
-      name: "Sandwich Falafel with Hummus",
-      description: "Falafel sandwich served with hummus.",
-      price: "from 740",
-      tags: ["Popular", "Single Serving"],
-      category: "Falafel Sandwich",
-    },
-    {
-      name: "Sandwich Falafel Mixed",
-      description: "Mixed falafel sandwich.",
-      price: "from 770",
-      tags: ["Popular", "Single Serving"],
-      category: "Falafel Sandwich",
-    },
-    {
-      name: "Fatayer Chicken Cheese",
-      description: "Cheese, Chicken",
-      price: "1,030",
-      tags: ["Popular", "Single Serving"],
-      category: "Turkish Fatayer",
-    },
-    {
-      name: "Turkish Pizza Deluxe",
-      description: "Classic Turkish pizza with special toppings.",
-      price: "850",
-      tags: ["Single Serving"],
-      category: "Turkish Pizza",
-    },
-    {
-      name: "Chicken Mandi",
-      description: "Traditional Arabian rice dish with tender chicken.",
-      price: "1,200",
-      tags: ["Most Ordered"],
-      category: "Mandi",
-    },
+    // COFFEES
+    { name: "Espresso", priceR: "450", priceL: "565", category: "Coffees" },
+    { name: "Café Latte", priceR: "545", priceL: "595", category: "Coffees" },
+    { name: "Flavoured Latte", priceR: "565", priceL: "615", category: "Coffees" },
+    { name: "Cappuccino (Hot/Iced)", priceR: "495", priceL: "545", category: "Coffees" },
+    { name: "Flat White", priceR: "545", priceL: "595", category: "Coffees" },
+    { name: "Pistachio Latte", priceR: "625", priceL: "695", category: "Coffees" },
+    { name: "Spanish Latte", priceR: "595", priceL: "735", category: "Coffees" },
+    { name: "Chai Tea Latte", priceR: "595", priceL: "645", category: "Coffees" },
+    { name: "Lotus Latte", priceR: "595", priceL: "645", category: "Coffees" },
+    { name: "Hazelnut Macchiato", priceR: "625", priceL: "745", category: "Coffees" },
+    { name: "Americano", priceR: "425", priceL: "495", category: "Coffees" },
+    { name: "White Americano", priceR: "425", priceL: "495", category: "Coffees" },
+    { name: "Cortado", priceR: "425", priceL: "495", category: "Coffees" },
+    { name: "White Mocha", priceR: "625", priceL: "695", category: "Coffees" },
+    { name: "Iced Coffee", priceR: "625", priceL: "695", category: "Coffees" },
+    // ICED COFFEES
+    { name: "Iced Espresso", priceR: "525", priceL: "565", category: "Iced Coffees" },
+    { name: "Iced Latte", priceR: "525", priceL: "665", category: "Iced Coffees" },
+    { name: "Flavoured Latte", priceR: "625", priceL: "735", category: "Iced Coffees" },
+    { name: "Iced Cappuccino", priceR: "525", priceL: "595", category: "Iced Coffees" },
+    { name: "Iced White Mocha", priceR: "695", priceL: "795", category: "Iced Coffees" },
+    { name: "Iced Spanish Latte", priceR: "725", priceL: "845", category: "Iced Coffees" },
+    { name: "Iced Caramel Macchiato", priceR: "695", priceL: "775", category: "Iced Coffees" },
+    { name: "Iced Hazelnut Macchiato", priceR: "695", priceL: "775", category: "Iced Coffees" },
+    { name: "Iced Flat White", priceR: "595", priceL: "695", category: "Iced Coffees" },
+    { name: "Iced Pistachio Latte", priceR: "895", priceL: "995", category: "Iced Coffees" },
+    { name: "Hot So Hot Chocolate", priceR: "695", priceL: "795", category: "Iced Coffees" },
+    // TEAS
+    { name: "Peach Iced Tea", priceR: "495", priceL: "575", category: "Teas" },
+    { name: "Lemon Iced Tea", priceR: "495", priceL: "525", category: "Teas" },
+    { name: "English Breakfast Tea", priceR: "", priceL: "95", category: "Teas" },
+    { name: "Green Tea", priceR: "", priceL: "95", category: "Teas" },
+    { name: "Lipton Tea", priceR: "", priceL: "295", category: "Teas" },
+    { name: "Green Tea", priceR: "", priceL: "295", category: "Teas" },
+    { name: "Karak Chai (Sweet)", priceR: "", priceL: "95", category: "Teas" },
+    // HOT CHOCOLATES
+    { name: "Signature Hot Chocolate", priceR: "595", priceL: "625", category: "Hot Chocolates" },
+    { name: "Dark Hot Chocolate", priceR: "595", priceL: "625", category: "Hot Chocolates" },
+    { name: "Salted Caramel Hot Chocolate", priceR: "595", priceL: "665", category: "Hot Chocolates" },
+    { name: "Marshmallow Hot Chocolate", priceR: "595", priceL: "665", category: "Hot Chocolates" },
+    // SMOOTHIES
+    { name: "Blueberry", priceR: "765", priceL: "885", category: "Smoothies" },
+    { name: "Guava", priceR: "795", priceL: "895", category: "Smoothies" },
+    { name: "Strawberry Banana", priceR: "795", priceL: "895", category: "Smoothies" },
+    { name: "Peachy Pineapple", priceR: "795", priceL: "895", category: "Smoothies" },
+    { name: "Mango Pineapple", priceR: "795", priceL: "895", category: "Smoothies" },
+    { name: "Fresh Orange & Coconut", priceR: "895", priceL: "995", category: "Smoothies" },
+    // SHAKES
+    { name: "Classic Shake", price: "645", category: "Shakes" },
+    { name: "Strawberry Vanilla Strawberry", price: "", category: "Shakes" },
+    { name: "Oreo Shake", price: "745", category: "Shakes" },
+    { name: "Dark Chocolate Shake", price: "795", category: "Shakes" },
+    { name: "Peaches And Cream Shake", price: "645", category: "Shakes" },
+    { name: "Royal Prairie Shake", price: "645", category: "Shakes" },
+    { name: "Raspberry Chocolate Shake", price: "645", category: "Shakes" },
+    { name: "Choco Hazelnut Shake", price: "645", category: "Shakes" },
+    { name: "Hazelnut Shake", price: "645", category: "Shakes" },
+    { name: "Mocha Shake", price: "645", category: "Shakes" },
+    { name: "Espresso Vanilla Shake", price: "645", category: "Shakes" },
+    { name: "White Chocolate Shake", price: "795", category: "Shakes" },
+    { name: "Salted Caramel Shake", price: "795", category: "Shakes" },
+    { name: "Marshmallow Shake", price: "645", category: "Shakes" },
+    // MOCKTAILS
+    { name: "Mint Margarita", price: "425", category: "Mocktails" },
+    { name: "Piña Colada", price: "545", category: "Mocktails" },
+    { name: "Mojito", price: "425", category: "Mocktails" },
+    { name: "The Last Temptation", price: "440", category: "Mocktails" },
+    { name: "Mango and Perigord Juice", price: "", category: "Mocktails" },
+    { name: "Paradise Island", price: "495", category: "Mocktails" },
+    { name: "Fruit Blend", price: "", category: "Mocktails" },
+    { name: "Lemon Mint", price: "465", category: "Mocktails" },
+    { name: "Manhattan", price: "440", category: "Mocktails" },
+    { name: "Blue Breeze", price: "", category: "Mocktails" },
+    // CHILLERS
+    { name: "Paradise Chiller", priceR: "545", priceL: "595", category: "Chillers" },
+    { name: "Black Pearl Chiller", priceR: "665", priceL: "125", category: "Chillers" },
+    { name: "Iced Lemon Chiller", priceR: "545", priceL: "625", category: "Chillers" },
+    { name: "Wild Tropical Chiller", priceR: "645", priceL: "525", category: "Chillers" },
+    // DRINKS
+    { name: "Soft Drinks", price: "140", category: "Drinks" },
+    { name: "Mineral Water", price: "90", category: "Drinks" },
   ],
-  Popular: [
-    {
-      name: "Shawarma Platter",
-      description: "Hearty platter for shawarma lovers.",
-      price: "from 1,450",
-      tags: ["Most Ordered", "Single Serving"],
-      category: "Shawarma",
-    },
-    {
-      name: "Sandwich Falafel with Hummus",
-      description: "Falafel sandwich served with hummus.",
-      price: "from 740",
-      tags: ["Popular", "Single Serving"],
-      category: "Falafel Sandwich",
-    },
-    {
-      name: "Sandwich Falafel Mixed",
-      description: "Mixed falafel sandwich.",
-      price: "from 770",
-      tags: ["Popular", "Single Serving"],
-      category: "Falafel Sandwich",
-    },
-    {
-      name: "Fatayer Chicken Cheese",
-      description: "Cheese, Chicken",
-      price: "1,030",
-      tags: ["Popular", "Single Serving"],
-      category: "Turkish Fatayer",
-    },
-  ],
-  Shawarma: [
-    {
-      name: "Shawarma Platter",
-      description: "Hearty platter for shawarma lovers.",
-      price: "from 1,450",
-      tags: ["Most Ordered", "Single Serving"],
-      category: "Shawarma",
-    },
-    {
-      name: "Chicken Shawarma Wrap",
-      description: "Fresh chicken shawarma wrapped in saj bread.",
-      price: "550",
-      tags: ["Single Serving"],
-      category: "Shawarma",
-    },
-    {
-      name: "Beef Shawarma Plate",
-      description: "Tender beef shawarma with sides.",
-      price: "1,200",
-      tags: ["Single Serving"],
-      category: "Shawarma",
-    },
-  ],
-  "Turkish Fatayer": [
-    {
-      name: "Fatayer Chicken Cheese",
-      description: "Cheese, Chicken",
-      price: "1,030",
-      tags: ["Popular", "Single Serving"],
-      category: "Turkish Fatayer",
-    },
-    {
-      name: "Fatayer Beef",
-      description: "Traditional Turkish pastry with spiced beef.",
-      price: "950",
-      tags: ["Single Serving"],
-      category: "Turkish Fatayer",
-    },
-    {
-      name: "Fatayer Spinach & Cheese",
-      description: "Vegetarian option with fresh spinach.",
-      price: "800",
-      tags: ["Single Serving"],
-      category: "Turkish Fatayer",
-    },
-  ],
-  "Falafel Sandwich": [
-    {
-      name: "Sandwich Falafel with Hummus",
-      description: "Falafel sandwich served with hummus.",
-      price: "from 740",
-      tags: ["Popular", "Single Serving"],
-      category: "Falafel Sandwich",
-    },
-    {
-      name: "Sandwich Falafel Mixed",
-      description: "Mixed falafel sandwich.",
-      price: "from 770",
-      tags: ["Popular", "Single Serving"],
-      category: "Falafel Sandwich",
-    },
-    {
-      name: "Falafel Deluxe",
-      description: "Premium falafel with extra toppings.",
-      price: "850",
-      tags: ["Single Serving"],
-      category: "Falafel Sandwich",
-    },
-  ],
-  Mandi: [
-    {
-      name: "Chicken Mandi",
-      description: "Traditional Arabian rice dish with tender chicken.",
-      price: "1,200",
-      tags: ["Most Ordered"],
-      category: "Mandi",
-    },
-    {
-      name: "Lamb Mandi",
-      description: "Aromatic rice with succulent lamb.",
-      price: "1,500",
-      tags: ["Single Serving"],
-      category: "Mandi",
-    },
-  ],
-  "Turkish Pizza": [
-    {
-      name: "Turkish Pizza Deluxe",
-      description: "Classic Turkish pizza with special toppings.",
-      price: "850",
-      tags: ["Single Serving"],
-      category: "Turkish Pizza",
-    },
-    {
-      name: "Meat Lovers Pizza",
-      description: "Loaded with mixed meats.",
-      price: "950",
-      tags: ["Single Serving"],
-      category: "Turkish Pizza",
-    },
-  ],
-  Sides: [
-    {
-      name: "Hummus Bowl",
-      description: "Creamy chickpea dip with olive oil.",
-      price: "350",
-      tags: ["Single Serving"],
-      category: "Sides",
-    },
-    {
-      name: "Baba Ghanoush",
-      description: "Smoky eggplant dip.",
-      price: "380",
-      tags: ["Single Serving"],
-      category: "Sides",
-    },
-    {
-      name: "Tabbouleh Salad",
-      description: "Fresh parsley and bulgur salad.",
-      price: "400",
-      tags: ["Single Serving"],
-      category: "Sides",
-    },
-  ],
-  Mutabbaq: [
-    {
-      name: "Chicken Mutabbaq",
-      description: "Stuffed savory pastry with chicken.",
-      price: "650",
-      tags: ["Single Serving"],
-      category: "Mutabbaq",
-    },
-    {
-      name: "Vegetable Mutabbaq",
-      description: "Mixed vegetables in crispy pastry.",
-      price: "550",
-      tags: ["Single Serving"],
-      category: "Mutabbaq",
-    },
-  ],
-  Fries: [
-    {
-      name: "Classic French Fries",
-      description: "Crispy golden fries.",
-      price: "250",
-      tags: ["Single Serving"],
-      category: "Fries",
-    },
-    {
-      name: "Loaded Cheese Fries",
-      description: "Fries with melted cheese and toppings.",
-      price: "450",
-      tags: ["Popular", "Single Serving"],
-      category: "Fries",
-    },
-  ],
+  Coffees: [],
+  "Iced Coffees": [],
+  Teas: [],
+  "Hot Chocolates": [],
+  Smoothies: [],
+  Shakes: [],
+  Mocktails: [],
+  Chillers: [],
+  Drinks: [],
 };
+
+// Populate category-specific arrays
+menuData.All.forEach((item) => {
+  const category = item.category as keyof typeof menuData;
+  if (menuData[category] && Array.isArray(menuData[category])) {
+    menuData[category].push(item);
+  }
+});
 
 export default function MenuSection() {
   const [selectedFilter, setSelectedFilter] = useState("All");
 
   const filters = [
     "All",
-    "Popular",
-    "Shawarma",
-    "Turkish Fatayer",
-    "Falafel Sandwich",
-    "Mandi",
-    "Turkish Pizza",
-    "Sides",
-    "Mutabbaq",
-    "Fries",
+    "Coffees",
+    "Iced Coffees",
+    "Teas",
+    "Hot Chocolates",
+    "Smoothies",
+    "Shakes",
+    "Mocktails",
+    "Chillers",
+    "Drinks",
   ];
 
   const currentItems = menuData[selectedFilter as keyof typeof menuData] || [];
@@ -340,24 +211,31 @@ export default function MenuSection() {
                     <h3 className="text-sm md:text-lg font-semibold text-white mb-1 font-inria break-words">
                       {item.name}
                     </h3>
-                    <p className="text-xs md:text-sm text-white/70 mb-2">
-                      {item.description}
-                    </p>
-                    <div className="flex gap-2 flex-wrap">
-                      {item.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2 py-0.5 text-xs rounded-full border border-[#00bfa5]/40 text-[#00bfa5]"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                   <div className="text-right md:text-right flex-shrink-0 w-full md:w-auto flex md:flex-col items-center md:items-end justify-between md:justify-start gap-2">
-                    <p className="text-base md:text-lg font-semibold text-white whitespace-nowrap">
-                      {item.price}
-                    </p>
+                    <div className="flex gap-3 items-center">
+                      {item.priceR && (
+                        <div className="text-center">
+                          <p className="text-[9px] text-white/50 uppercase mb-1">R</p>
+                          <p className="text-sm md:text-base font-semibold text-white whitespace-nowrap">
+                            {item.priceR}
+                          </p>
+                        </div>
+                      )}
+                      {item.priceL && (
+                        <div className="text-center">
+                          <p className="text-[9px] text-white/50 uppercase mb-1">L</p>
+                          <p className="text-sm md:text-base font-semibold text-white whitespace-nowrap">
+                            {item.priceL}
+                          </p>
+                        </div>
+                      )}
+                      {item.price && !item.priceR && !item.priceL && (
+                        <p className="text-sm md:text-base font-semibold text-white whitespace-nowrap">
+                          {item.price}
+                        </p>
+                      )}
+                    </div>
                     <button className="px-3 md:px-4 py-1 md:py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs md:text-sm font-medium transition-all border border-white/20 whitespace-nowrap">
                       Order
                     </button>

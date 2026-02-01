@@ -14,15 +14,15 @@ export default function Footer() {
               Fasana Cafe
             </h2>
             <p className="text-xs md:text-sm text-gray-400 mb-4 md:mb-6">
-              Authentic Turkish & Middle Eastern flavors
+              Fasana Cafe is a cozy haven where coffee meets culture. Enjoy
             </p>
-            <p className="text-xs md:text-sm text-gray-300 mb-6 md:mb-8 leading-relaxed">
+            {/* <p className="text-xs md:text-sm text-gray-300 mb-6 md:mb-8 leading-relaxed">
               Authentic Turkish & Middle Eastern flavors: Shawarma, Falafel,
               Mandi, Mutabbaq, Turkish Pizza and more.
-            </p>
+            </p> */}
             <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
               <button className="bg-white text-black px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold hover:bg-gray-200 transition-colors">
-                Order on WhatsApp
+                Order Now
               </button>
               <button className="border border-white text-white px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold hover:bg-white/10 transition-colors">
                 View Menu
@@ -36,18 +36,18 @@ export default function Footer() {
               VISIT
             </h3>
             <div className="space-y-3 md:space-y-4 text-xs md:text-sm text-gray-300">
-              <p>Istanbul-style Turkish & Middle Eastern Restaurant</p>
-              <p>Pakistan</p>
+              {/* <p>Istanbul-style Turkish & Middle Eastern Restaurant</p> */}
+              {/* <p>Pakistan</p> */}
               <Link
                 href="#"
                 className="text-white hover:text-gray-300 transition-colors block"
               >
-                Open in Maps
+                Visit Us
               </Link>
 
               <div className="pt-2">
                 <p className="text-gray-400 text-[11px] md:text-xs mb-1">
-                  WhatsApp:
+                  Contact No.
                 </p>
                 <p className="font-semibold text-sm">923001234567</p>
               </div>

@@ -453,6 +453,11 @@ export default function Home() {
     return () => window.removeEventListener("resize", checkSize);
   }, []);
 
+  // Scroll to top when section changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [section]);
+
   useEffect(() => {
     if (!splashDone || section !== "Home") return;
 
@@ -590,7 +595,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-black/55" />
 
       {/* Content Overlay with horizontal slider */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center pt-20 md:pt-20 px-4 md:px-6">
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center pt-32 md:pt-20 px-4 md:px-6">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={section}
