@@ -181,55 +181,59 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black/80 backdrop-blur-md border-t border-white/10">
-          <div className="flex flex-col gap-2 p-4">
-            {items.map((item) => {
-              const isActive = section === item.href;
+        <div className="md:hidden fixed inset-0 bg-black z-50 flex flex-col">
+          {/* Close button */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-4 left-4 w-10 h-10 flex items-center justify-center border border-white/30 rounded-md hover:bg-white/10 transition-colors"
+            style={{ WebkitTapHighlightColor: "transparent" }}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className="w-5 h-5 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
 
-              return (
-                <button
-                  key={item.href}
-                  onClick={() => {
-                    setSection(item.href as Section);
-                    setIsOpen(false);
-                  }}
-                  className={[
-                    "flex items-center gap-3",
-                    "rounded-lg",
-                    "px-4 py-3",
-                    "transition-all duration-200",
-                    "text-sm font-medium",
-                    "font-inria",
-                    "text-left",
-                    isActive
-                      ? "bg-white/20 text-white"
-                      : "text-white/80 hover:text-white hover:bg-white/10",
-                  ].join(" ")}
-                  style={{ WebkitTapHighlightColor: "transparent" }}
-                >
-                  <span className="flex-shrink-0">{item.icon}</span>
-                  <span>{item.label}</span>
-                </button>
-              );
-            })}
+          {/* Menu items - Centered */}
+          <div className="flex-1 flex flex-col items-center justify-center gap-6 px-8">
+            {items.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => {
+                  setSection(item.href as Section);
+                  setIsOpen(false);
+                }}
+                className="text-white text-2xl font-normal tracking-wide hover:text-white/70 transition-colors"
+                style={{
+                  WebkitTapHighlightColor: "transparent",
+                  fontFamily: "'Inria Serif', serif",
+                }}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Bottom order section */}
+          <div className="px-8 pb-12 flex flex-col items-center gap-4">
+            <p className="text-white/60 text-xs tracking-wider uppercase font-medium">
+              READY TO ORDER?
+            </p>
+            <p className="text-white text-sm mb-2">WhatsApp us in 1 Tap!</p>
             <button
               onClick={() => {
                 setSection("Menu");
                 setIsOpen(false);
               }}
-              className={[
-                "rounded-lg",
-                "px-4 py-3",
-                "transition-all duration-200",
-                "text-sm font-semibold",
-                "font-inria",
-                "w-full",
-                "bg-white text-black",
-                "hover:bg-white/90 mt-2",
-              ].join(" ")}
+              className="bg-[#00bfa5] text-black font-semibold px-8 py-3 rounded-full hover:bg-[#00bfa5]/90 transition-colors min-w-[120px]"
               style={{ WebkitTapHighlightColor: "transparent" }}
             >
-              Order Now
+              Order
             </button>
           </div>
         </div>
