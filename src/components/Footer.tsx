@@ -102,7 +102,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 py-4 md:py-6 flex flex-col md:flex-row justify-between items-center text-xs md:text-sm text-gray-400 gap-4">
           <p>© 2026 Fasana Cafe. All rights reserved.</p>
           <p className="text-center md:text-right">
-            Midnight dining • Crafted with care
+            Developed by Bits O' Clock
           </p>
         </div>
       </div>
