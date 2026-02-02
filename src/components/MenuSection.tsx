@@ -2,8 +2,16 @@
 
 import { useState } from "react";
 
+type MenuItem = {
+  name: string;
+  category: string;
+  priceR?: string;
+  priceL?: string;
+  price?: string;
+};
+
 // Menu data by category
-const menuData = {
+const menuData: { [key: string]: MenuItem[] } = {
   All: [
     // COFFEES
     { name: "Espresso", priceR: "450", priceL: "565", category: "Coffees" },
@@ -256,9 +264,9 @@ const menuData = {
 
 // Populate category-specific arrays
 menuData.All.forEach((item) => {
-  const category = item.category as keyof typeof menuData;
-  if (menuData[category] && Array.isArray(menuData[category])) {
-    menuData[category].push(item);
+  const category = item.category;
+  if (menuData[category]) {
+    (menuData[category] as MenuItem[]).push(item);
   }
 });
 
